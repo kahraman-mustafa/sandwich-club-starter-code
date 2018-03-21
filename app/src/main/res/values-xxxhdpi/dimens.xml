@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="img_horizontal_padding">64dp</dimen>
+    <dimen name="img_vertical_padding">32dp</dimen>
+    <dimen name="horizontal_padding">16dp</dimen>
+    <dimen name="vertical_padding">16dp</dimen>
+    <dimen name="detail_vertical_margin">32dp</dimen>
+    <dimen name="detail_horizontal_margin">16dp</dimen>
+</resources>

@@ -1,59 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.udacity.sandwichclub.DetailActivity">
 
-    <ImageView
-        android:id="@+id/image_iv"
+
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/sandwich_picture_content_description"
-        android:scaleType="centerCrop" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/origin_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/image_iv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/detail_vertical_margin"
+            android:layout_marginEnd="@dimen/detail_horizontal_margin"
+            android:layout_marginStart="@dimen/detail_horizontal_margin"
+            android:layout_marginTop="@dimen/detail_vertical_margin"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/sandwich_picture_content_description"
+            android:cropToPadding="true"
+            android:paddingBottom="@dimen/img_vertical_padding"
+            android:paddingEnd="@dimen/img_horizontal_padding"
+            android:paddingLeft="@dimen/img_horizontal_padding"
+            android:paddingRight="@dimen/img_horizontal_padding"
+            android:paddingStart="@dimen/img_horizontal_padding"
+            android:paddingTop="@dimen/img_vertical_padding"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/img_guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ham_and_cheese_600" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail_also_known_as_label"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/origin_tv_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/detail_horizontal_margin"
+            android:layout_marginStart="@dimen/detail_horizontal_margin"
+            android:layout_marginTop="@dimen/detail_vertical_margin"
+            android:gravity="right"
+            android:paddingBottom="@dimen/horizontal_padding"
+            android:paddingEnd="@dimen/horizontal_padding"
+            android:paddingLeft="@dimen/horizontal_padding"
+            android:paddingRight="@dimen/horizontal_padding"
+            android:paddingStart="@dimen/horizontal_padding"
+            android:paddingTop="@dimen/vertical_padding"
+            android:text="@string/detail_place_of_origin_label"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_iv" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail_ingredients_label"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/origin_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/detail_horizontal_margin"
+            android:layout_marginStart="@dimen/detail_horizontal_margin"
+            android:gravity="left"
+            android:paddingBottom="@dimen/vertical_padding"
+            android:paddingEnd="@dimen/horizontal_padding"
+            android:paddingLeft="@dimen/horizontal_padding"
+            android:paddingRight="@dimen/horizontal_padding"
+            android:paddingStart="@dimen/horizontal_padding"
+            android:paddingTop="@dimen/vertical_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/vertical_guideline"
+            app:layout_constraintTop_toTopOf="@+id/origin_tv_label"
+            tools:text="the origin" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail_place_of_origin_label"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/also_known_tv_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/detail_horizontal_margin"
+            android:layout_marginLeft="@dimen/detail_horizontal_margin"
+            android:layout_marginTop="@dimen/detail_vertical_margin"
+            android:gravity="right"
+            android:paddingBottom="@dimen/vertical_padding"
+            android:paddingEnd="@dimen/horizontal_padding"
+            android:paddingLeft="@dimen/horizontal_padding"
+            android:paddingRight="@dimen/horizontal_padding"
+            android:paddingStart="@dimen/horizontal_padding"
+            android:paddingTop="@dimen/vertical_padding"
+            android:text="@string/detail_also_known_as_label"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/origin_tv_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/origin_tv" />
 
-    <TextView
-        android:id="@+id/description_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/also_known_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/detail_horizontal_margin"
+            android:layout_marginRight="@dimen/detail_horizontal_margin"
+            android:paddingBottom="@dimen/vertical_padding"
+            android:paddingEnd="@dimen/horizontal_padding"
+            android:paddingLeft="@dimen/horizontal_padding"
+            android:paddingRight="@dimen/horizontal_padding"
+            android:paddingStart="@dimen/horizontal_padding"
+            android:paddingTop="@dimen/vertical_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/origin_tv"
+            app:layout_constraintTop_toTopOf="@+id/also_known_tv_label"
+            tools:text="known as" />
 
-    <TextView
-        android:id="@+id/ingredients_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/description_tv_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/detail_horizontal_margin"
+            android:layout_marginLeft="@dimen/detail_horizontal_margin"
+            android:layout_marginTop="@dimen/detail_vertical_margin"
+            android:gravity="right"
+            android:paddingBottom="@dimen/vertical_padding"
+            android:paddingEnd="@dimen/horizontal_padding"
+            android:paddingLeft="@dimen/horizontal_padding"
+            android:paddingRight="@dimen/horizontal_padding"
+            android:paddingStart="@dimen/horizontal_padding"
+            android:paddingTop="@dimen/vertical_padding"
+            android:text="@string/detail_description_label"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/ingredients_tv_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ingredients_tv" />
 
-    <TextView
-        android:id="@+id/also_known_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/description_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/detail_horizontal_margin"
+            android:layout_marginRight="@dimen/detail_horizontal_margin"
+            android:paddingBottom="@dimen/vertical_padding"
+            android:paddingEnd="@dimen/horizontal_padding"
+            android:paddingLeft="@dimen/horizontal_padding"
+            android:paddingRight="@dimen/horizontal_padding"
+            android:paddingStart="@dimen/horizontal_padding"
+            android:paddingTop="@dimen/vertical_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ingredients_tv"
+            app:layout_constraintTop_toTopOf="@+id/description_tv_label"
+            tools:text="the description" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/detail_description_label"
-        android:textStyle="bold" />
-</FrameLayout>
+        <TextView
+            android:id="@+id/ingredients_tv_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/detail_horizontal_margin"
+            android:layout_marginLeft="@dimen/detail_horizontal_margin"
+            android:layout_marginTop="@dimen/detail_vertical_margin"
+            android:gravity="right"
+            android:paddingBottom="@dimen/vertical_padding"
+            android:paddingEnd="@dimen/horizontal_padding"
+            android:paddingLeft="@dimen/horizontal_padding"
+            android:paddingRight="@dimen/horizontal_padding"
+            android:paddingStart="@dimen/horizontal_padding"
+            android:paddingTop="@dimen/vertical_padding"
+            android:text="@string/detail_ingredients_label"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/also_known_tv_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/also_known_tv" />
+
+        <TextView
+            android:id="@+id/ingredients_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/detail_horizontal_margin"
+            android:layout_marginRight="@dimen/detail_horizontal_margin"
+            android:paddingBottom="@dimen/vertical_padding"
+            android:paddingEnd="@dimen/horizontal_padding"
+            android:paddingLeft="@dimen/horizontal_padding"
+            android:paddingRight="@dimen/horizontal_padding"
+            android:paddingStart="@dimen/horizontal_padding"
+            android:paddingTop="@dimen/vertical_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/also_known_tv"
+            app:layout_constraintTop_toTopOf="@+id/ingredients_tv_label"
+            tools:text="the ingredients \n1 \n2" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/vertical_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.32" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/img_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.40" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

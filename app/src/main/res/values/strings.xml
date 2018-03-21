@@ -26,6 +26,14 @@
         <item>Vada Pav</item>
     </string-array>
 
+    <string name="key_sandwich_name">name</string>
+    <string name="key_sandwich_main_name">mainName</string>
+    <string name="key_sandwich_also_known_as">alsoKnownAs</string>
+    <string name="key_sandwich_place_of_origin">placeOfOrigin</string>
+    <string name="key_sandwich_description">description</string>
+    <string name="key_sandwich_ingredients">ingredients</string>
+    <string name="key_sandwich_image">image</string>
+
     <string-array name="sandwich_details">
         <item>{\"name\":{\"mainName\":\"Ham and cheese
             sandwich\",\"alsoKnownAs\":[]},\"placeOfOrigin\":\"\",\"description\":\"A ham and cheese
