@@ -85,9 +85,9 @@ public class DetailActivity extends AppCompatActivity {
 
         String ingredientsText = "-";
         if(sandwich.getIngredients() != null) {
-            ingredientsText = sandwich.getIngredients().get(0);
+            ingredientsText = "- " + sandwich.getIngredients().get(0);
             for (int i = 1; i < sandwich.getIngredients().size(); i++) {
-                ingredientsText += "\n" + sandwich.getIngredients().get(i);
+                ingredientsText += "\n- " + sandwich.getIngredients().get(i);
             }
         }
         tvIngredients.setText(ingredientsText);

@@ -14,36 +14,37 @@
 
         <ImageView
             android:id="@+id/image_iv"
-            app:layout_constraintBottom_toTopOf="@+id/img_guideline"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="@id/description_tv"
+            app:layout_constraintRight_toLeftOf="@id/img_guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            android:scaleType="fitCenter"
             android:contentDescription="@string/sandwich_picture_content_description"
             app:srcCompat="@drawable/ham_and_cheese_600"
+            android:cropToPadding="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitStart"
+            android:paddingBottom="@dimen/img_vertical_padding"
             android:paddingEnd="@dimen/img_horizontal_padding"
             android:paddingLeft="@dimen/img_horizontal_padding"
             android:paddingRight="@dimen/img_horizontal_padding"
             android:paddingStart="@dimen/img_horizontal_padding"
+            android:paddingTop="@dimen/img_vertical_padding"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/detail_vertical_margin"
-            android:layout_marginEnd="@dimen/detail_horizontal_margin"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/detail_horizontal_margin"
-            android:layout_marginTop="@dimen/detail_vertical_margin"/>
+            android:layout_marginTop="@dimen/detail_vertical_margin"
+            android:layout_marginBottom="@dimen/detail_vertical_margin"
+            android:layout_marginLeft="@dimen/detail_horizontal_margin" />
 
         <TextView
             android:id="@+id/origin_tv_label"
+            app:layout_constraintLeft_toRightOf="@id/img_guideline"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/vertical_guideline"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/img_guideline"
             android:text="@string/detail_place_of_origin_label"
-            android:textStyle="bold"
             android:gravity="start"
+            android:textStyle="bold"
             android:paddingBottom="@dimen/horizontal_padding"
             android:paddingEnd="@dimen/horizontal_padding"
             android:paddingLeft="@dimen/horizontal_padding"
@@ -52,8 +53,7 @@
             android:paddingTop="@dimen/vertical_padding"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/detail_horizontal_margin"
-            android:layout_marginStart="@dimen/detail_horizontal_margin" />
+            android:layout_marginTop="@dimen/detail_vertical_margin"/>
 
         <TextView
             android:id="@+id/origin_tv"
@@ -71,16 +71,16 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/detail_horizontal_margin"
-            android:layout_marginRight="@dimen/detail_horizontal_margin" />
+            android:layout_marginRight="@dimen/detail_horizontal_margin"/>
 
         <TextView
             android:id="@+id/also_known_tv_label"
             app:layout_constraintEnd_toEndOf="@+id/origin_tv_label"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/origin_tv_label"
             app:layout_constraintTop_toBottomOf="@+id/origin_tv"
             android:text="@string/detail_also_known_as_label"
-            android:textStyle="bold"
             android:gravity="start"
+            android:textStyle="bold"
             android:paddingBottom="@dimen/vertical_padding"
             android:paddingEnd="@dimen/horizontal_padding"
             android:paddingLeft="@dimen/horizontal_padding"
@@ -89,9 +89,7 @@
             android:paddingTop="@dimen/vertical_padding"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/detail_horizontal_margin"
-            android:layout_marginLeft="@dimen/detail_horizontal_margin"
-            android:layout_marginTop="@dimen/detail_vertical_margin" />
+            android:layout_marginTop="@dimen/detail_vertical_margin"/>
 
         <TextView
             android:id="@+id/also_known_tv"
@@ -114,11 +112,11 @@
         <TextView
             android:id="@+id/ingredients_tv_label"
             app:layout_constraintEnd_toEndOf="@+id/also_known_tv_label"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/also_known_tv_label"
             app:layout_constraintTop_toBottomOf="@+id/also_known_tv"
             android:text="@string/detail_ingredients_label"
-            android:textStyle="bold"
             android:gravity="start"
+            android:textStyle="bold"
             android:paddingBottom="@dimen/vertical_padding"
             android:paddingEnd="@dimen/horizontal_padding"
             android:paddingLeft="@dimen/horizontal_padding"
@@ -127,8 +125,6 @@
             android:paddingTop="@dimen/vertical_padding"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/detail_horizontal_margin"
-            android:layout_marginLeft="@dimen/detail_horizontal_margin"
             android:layout_marginTop="@dimen/detail_vertical_margin" />
 
         <TextView
@@ -151,8 +147,8 @@
 
         <TextView
             android:id="@+id/description_tv_label"
-            app:layout_constraintEnd_toEndOf="@+id/ingredients_tv_label"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/ingredients_tv_label"
             app:layout_constraintTop_toBottomOf="@+id/ingredients_tv"
             android:text="@string/detail_description_label"
             android:gravity="start"
@@ -165,14 +161,12 @@
             android:paddingTop="@dimen/vertical_padding"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/detail_horizontal_margin"
-            android:layout_marginLeft="@dimen/detail_horizontal_margin"
-            android:layout_marginTop="@dimen/detail_vertical_margin"/>
+            android:layout_marginTop="@dimen/detail_vertical_margin" />
 
         <TextView
             android:id="@+id/description_tv"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/description_tv_label"
             app:layout_constraintTop_toBottomOf="@+id/description_tv_label"
             tools:text="the description"
             android:gravity="start"
@@ -184,24 +178,21 @@
             android:paddingTop="@dimen/vertical_padding"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/detail_horizontal_margin"
-            android:layout_marginStart="@dimen/detail_horizontal_margin"
             android:layout_marginEnd="@dimen/detail_horizontal_margin"
-            android:layout_marginRight="@dimen/detail_horizontal_margin"
-            android:layout_marginBottom="@dimen/detail_vertical_margin"/>
+            android:layout_marginRight="@dimen/detail_horizontal_margin"/>
 
         <android.support.constraint.Guideline
             android:id="@+id/vertical_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.32" />
+            app:layout_constraintGuide_percent="0.58" />
 
         <android.support.constraint.Guideline
             android:id="@+id/img_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             app:layout_constraintGuide_percent="0.40" />
 
     </android.support.constraint.ConstraintLayout>
